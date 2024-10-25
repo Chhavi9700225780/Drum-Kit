@@ -29,6 +29,9 @@ html {
     color: white;
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
+    border-radius: 1rem;
+    border: .4rem solid rgba(255, 200, 0, 0.774);
+    opacity: 60;
   }
   
   .playing {
