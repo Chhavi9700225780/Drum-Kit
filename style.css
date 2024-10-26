@@ -1,50 +1,85 @@
 html {
-    font-size: 10px;
-    background: url(background\ \(1\).jpg) bottom center;
-    background-size: cover;
-  }
-  body,html {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
-  .keys {
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  font-size: 10px;
+  background: url(background\ (1).jpg) bottom center;
+  background-size: cover;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Keys Container */
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Position for children */
+}
+
+/* Individual Key Styling */
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .1s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6); /* Darker background for better visibility */
+  text-shadow: 0 0 .5rem black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Subtle shadow effect */
+}
+
+/* Hover and Active Effects */
+.key:hover {
+  background: rgba(255, 198, 0, 0.8); /* Bright hover effect */
+  color: black; /* Change text color on hover */
+  box-shadow: 0 0 20px rgba(255, 198, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Playing Effect */
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600, 0 0 20px #ffc600; /* Added glow effect */
+}
+
+/* Key Press Animation */
+.kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+/* Sound Label Styling */
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+  transition: color .1s ease; /* Transition for color change */
+}
+
+/* Text Shadow Effect */
+.key:hover .sound {
+  color: #fff; /* Change sound color on key hover */
+  text-shadow: 0 0 1rem #ffc600; /* Glow effect on sound text */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
   .key {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
+    width: 80%; /* Make keys responsive on smaller screens */
+    font-size: 1.2rem; /* Reduce font size */
   }
-  
-  .playing {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+
+  .kbd {
+    font-size: 3rem; /* Adjust kbd size */
   }
-  
-  kbd {
-    display: block;
-    font-size: 4rem;
-  }
-  
-  .sound {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: #ffc600;
-  }
+}

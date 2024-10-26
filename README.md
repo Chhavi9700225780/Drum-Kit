@@ -48,4 +48,17 @@ A simple Drum Kit application built using HTML, CSS, and JavaScript. Users can p
 └── sounds/         # Directory for sound files
 
 
+Enhancements🎉
+Beautiful animations for each button press.
+A color-changing background effect to enhance user experience.
+Improved styling for a modern and interactive look.
+markdown
+Copy code
 
+### Summary of Changes
+- **HTML:** Added a `div` for the background animation.
+- **CSS:** Created a color-changing background and improved button effects with radial gradients and transitions.
+- **JavaScript:** Kept functionality intact while ensuring that the animations trigger correctly on keypress.
+- **README:** Added a section for enhancements detailing the new features without removing existing content.
+
+You can copy and paste this code and README structure into your project. Let me know if you need any f
