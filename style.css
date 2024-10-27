@@ -8,6 +8,10 @@ html {
     padding: 0;
     font-family: sans-serif;
   }
+
+  /* .sachu{
+    background-color: transparent;
+  } */
   
   .keys {
     display: flex;
@@ -51,3 +55,69 @@ html {
     letter-spacing: .1rem;
     color: #ffc600;
   }
+
+  h1 {
+    margin-bottom: 20px;
+}
+
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   
+}
+
+audio {
+    width: 300px;
+    margin-bottom: 10px;
+    appearance: none;
+    background: transparent;
+}
+
+audio::-webkit-slider-runnable-track {
+    background: #007BFF;
+    height: 8px;
+    border-radius: 5px;
+}
+
+audio::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2px solid #007BFF;
+    margin-top: -4px;
+}
+
+#recordButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+#playButton {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
